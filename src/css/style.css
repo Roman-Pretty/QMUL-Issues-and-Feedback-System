@@ -1,5 +1,8 @@
 @import url(./reset.css);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap);
+/**
+ * General Styling
+ */
 body {
   background: #F5F5F5;
 }
@@ -15,6 +18,27 @@ body {
   text-transform: uppercase;
 }
 
+.text-title {
+  color: #0D3273;
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-card-title {
+  color: #939393;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/**
+ * Header Styling
+ */
 header {
   width: 100vw;
   height: 5.3125rem;
@@ -54,4 +78,36 @@ header #selected {
 }
 header a:hover {
   color: #CEA600;
+}
+
+/**
+ * Dashboard Styling
+ */
+#dashboard {
+  padding-left: 10.12rem;
+  padding-right: 10.12rem;
+  padding-top: 4rem;
+}
+#dashboard .dashboard-card {
+  width: 22.5rem;
+  height: 37.3125rem;
+  flex-shrink: 0;
+  border-radius: 2.375rem;
+  border: 1px solid #E5E5E5;
+  background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dashboard .dashboard-card .dashboard-card-header {
+  width: 100%;
+  padding: 2rem;
+  display: inline-flex;
+  height: 7.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  flex-shrink: 0;
 }/*# sourceMappingURL=style.css.map */
