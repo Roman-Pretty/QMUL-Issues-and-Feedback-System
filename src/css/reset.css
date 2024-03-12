@@ -1,0 +1,38 @@
+/* Reset CSS for Basic Elements */
+
+/* Reset margins and paddings */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+form, fieldset, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset font styles */
+body,
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* Reset list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Reset anchor styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}

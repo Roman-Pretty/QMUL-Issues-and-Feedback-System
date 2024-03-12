@@ -1,11 +1,11 @@
 import './css/App.css';
+import Header from './Header';
 import React, {useState} from 'react';
 
 const App = () => {
 
     return (
-    <div>
-    </div>
+    <Header />
   );
 };
 export default App;

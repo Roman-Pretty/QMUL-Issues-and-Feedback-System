@@ -1,0 +1,69 @@
+@import url(./reset.css);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap);
+
+$primary: #0D3273;
+$text: #FFFFFF;
+$accent: #CEA600;
+
+body {
+    background: #F5F5F5;
+}
+
+.text-header {
+    color: $text;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+header {
+    width: 100vw;
+    height: 5.3125rem;
+    flex-shrink: 0;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10.12rem;
+    padding-right: 10.12rem;
+
+    ul {
+        display: inherit;
+        align-items: center;
+        justify-content: space-between;
+        width: 18vw;
+    }
+
+    .v-div {
+        width: 0.125rem;
+        height: 1.6875rem;
+        flex-shrink: 0;
+        background-color: $text;
+    }
+
+    .user-icon {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #selected {
+        position: absolute;
+        border-radius: 1rem;
+        background: $accent;
+        width: 6.3125rem;
+        height: 0.1875rem;
+        // TODO: Fix the position of the selected bar to selected page
+        top: 3.6rem;
+        left: 10.12rem;
+    }
+
+    a:hover {
+        color: $accent;
+    }
+
+}

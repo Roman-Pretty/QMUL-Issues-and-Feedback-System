@@ -1,0 +1,57 @@
+@import url(./reset.css);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap);
+body {
+  background: #F5F5F5;
+}
+
+.text-header {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+header {
+  width: 100vw;
+  height: 5.3125rem;
+  flex-shrink: 0;
+  background-color: #0D3273;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10.12rem;
+  padding-right: 10.12rem;
+}
+header ul {
+  display: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 18vw;
+}
+header .v-div {
+  width: 0.125rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+  background-color: #FFFFFF;
+}
+header .user-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header #selected {
+  position: absolute;
+  border-radius: 1rem;
+  background: #CEA600;
+  width: 6.3125rem;
+  height: 0.1875rem;
+  top: 3.6rem;
+  left: 10.12rem;
+}
+header a:hover {
+  color: #CEA600;
+}/*# sourceMappingURL=style.css.map */
