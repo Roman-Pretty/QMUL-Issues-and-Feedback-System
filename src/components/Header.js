@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactComponent as User } from './img/user.svg';
+import { ReactComponent as User } from '../img/user.svg';
 
 const Header = () => {
 

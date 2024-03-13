@@ -1,4 +1,4 @@
-import './css/App.css';
+import '../css/App.css';
 import React, { useState } from 'react';
 
 function DashboardCard() {
@@ -8,7 +8,7 @@ function DashboardCard() {
                 <h1 className='text-title'>Dashboard</h1>
                 <p className='text-card-title'>Welcome User</p>
             </div>
-
+            <div className='dashboard-card-accent'></div>
         </div>
     );
 }
@@ -50,6 +50,14 @@ function SmallCard({ type, count = 0 }) {
     );
 }
 
+function LargeCard({type, title}) {
+    return (
+        <div className='large-card'>    
+            <h1 className='text-card-title'>{title}</h1>
+        </div>
+    );
+}
+
 const Dashboard = () => {
     return (
         <div id='dashboard'>
@@ -60,6 +68,10 @@ const Dashboard = () => {
                     <SmallCard type={'EC'} count={1} />
                     <SmallCard type={'Urgent EC'} />
                     <SmallCard type={'Archived'} count={6} />
+                </div>
+                <div className='large-cards'>
+                    <LargeCard title={"Unable to access QMPlus"}/>
+                    <LargeCard title={"Extension on ECS414U"}/>
                 </div>
             </div>
         </div>
