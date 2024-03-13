@@ -133,6 +133,12 @@ footer .footer-content {
   padding-top: 0.8vh;
   gap: 2vw;
 }
+footer .footer-content a {
+  text-decoration: underline;
+}
+footer .footer-content a:hover {
+  color: #CEA600;
+}
 footer .footer-content div {
   display: flex;
   min-width: 8vw;

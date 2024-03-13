@@ -147,6 +147,14 @@ footer {
         align-items: flex-start;
         padding-top: 0.8vh;
         gap: 2vw;
+       
+        a{
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            color: $accent;
+        }
 
         div {
             display: flex;
