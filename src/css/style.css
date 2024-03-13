@@ -7,6 +7,14 @@ body {
   background: #F5F5F5;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 .text-header {
   color: #FFFFFF;
   text-align: center;
@@ -16,6 +24,24 @@ body {
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.text-footer-title {
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.text-footer {
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .text-title {
@@ -36,12 +62,22 @@ body {
   line-height: normal;
 }
 
+.text-card-count {
+  color: #0D3273;
+  text-align: center;
+  font-family: Inter;
+  font-size: 3.3125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 /**
  * Header Styling
  */
 header {
   width: 100vw;
-  height: 5.3125rem;
+  height: 9.5vh;
   flex-shrink: 0;
   background-color: #0D3273;
   display: flex;
@@ -81,16 +117,59 @@ header a:hover {
 }
 
 /**
+ * Footer Styling
+ */
+footer {
+  height: 8vh;
+  width: 100vw;
+  background: #092657;
+}
+footer .footer-content {
+  margin-left: 10.12rem;
+  display: flex;
+  width: 50vw;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 0.8vh;
+  gap: 2vw;
+}
+footer .footer-content div {
+  display: flex;
+  min-width: 8vw;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  flex-shrink: 0;
+}
+footer .footer-content div > p {
+  max-width: 10vw;
+}
+footer .footer-content div article {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+footer .footer-content .v-div {
+  min-width: 1px;
+  height: 53px;
+  background: #FEFEFE;
+}
+
+/**
  * Dashboard Styling
  */
 #dashboard {
   padding-left: 10.12rem;
   padding-right: 10.12rem;
   padding-top: 4rem;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  height: 82.5vh;
 }
 #dashboard .dashboard-card {
-  width: 22.5rem;
-  height: 37.3125rem;
+  width: 25vw;
+  height: 66vh;
   flex-shrink: 0;
   border-radius: 2.375rem;
   border: 1px solid #E5E5E5;
@@ -110,4 +189,34 @@ header a:hover {
   align-items: flex-start;
   text-align: left;
   flex-shrink: 0;
+}
+#dashboard .small-card {
+  width: 12vw;
+  height: 24vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2.375rem;
+  border: 1px solid #E5E5E5;
+  background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
+}
+#dashboard .small-card .small-card-content {
+  display: inline-flex;
+  height: 9.125rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+#dashboard .small-card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0px 13px 24px 0px rgba(149, 157, 165, 0.2);
+  transition: background-color 500ms linear;
+}
+#dashboard .small-card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
 }/*# sourceMappingURL=style.css.map */
