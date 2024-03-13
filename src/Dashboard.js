@@ -54,10 +54,14 @@ const Dashboard = () => {
     return (
         <div id='dashboard'>
             <DashboardCard />
-            <SmallCard type={'Issues'} count={3} />
-            <SmallCard type={'EC'} count={1} />
-            <SmallCard type={'Urgent EC'} />
-            <SmallCard type={'Archived'} count={6} />
+            <div className='card-wrapper'>
+                <div className='small-cards'>
+                    <SmallCard type={'Issues'} count={3} />
+                    <SmallCard type={'EC'} count={1} />
+                    <SmallCard type={'Urgent EC'} />
+                    <SmallCard type={'Archived'} count={6} />
+                </div>
+            </div>
         </div>
     );
 };

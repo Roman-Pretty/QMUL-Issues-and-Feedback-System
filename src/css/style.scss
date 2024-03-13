@@ -192,8 +192,24 @@ footer {
     padding-top: 4rem;
     display: inline-flex;
     align-items: flex-start;
-    gap: 1.25rem;
+    gap: 3.6vw;
     height: 82.5vh;
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .small-cards {
+            width: 50vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+    }
 
     .dashboard-card {
         width: 25vw;
