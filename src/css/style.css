@@ -284,3 +284,227 @@ footer .footer-content .v-div {
   transform: scale(1) translateZ(0);
   box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
 }/*# sourceMappingURL=style.css.map */
+
+/* -------------------------------------- */
+/* 
+  FAQ styling 
+*/
+
+#FAQ {
+  width: 100%;
+  margin: 2rem 0 2rem 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#FAQ h1 {
+  color: #092657;
+  text-align: center;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#FAQ .question-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#FAQ .question-box p {
+  color: #000;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#FAQ .question-box .question {
+  display: flex;
+  width: 75vw;
+  height: 100px;
+  padding: 30px 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFF;
+}
+
+#FAQ .question-box .closed {
+  border-radius: 50px;
+  border: 1px solid #000;
+}
+
+#FAQ .question-box .opened {
+  border-radius: 50px 50px 0px 0px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  background: #FFF;
+}
+
+#FAQ .question-box .answer {
+  display: flex;
+  width: 75vw;
+  height: 100px;
+  padding: 30px 50px;
+  align-items: center;
+  border-radius: 0px 0px 50px 50px;
+  border: 1px solid #000;
+  background: #0D3273;
+}
+
+#FAQ .question-box .answer p {
+  color: #FEFEFE;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* -------------------------------------- */
+/*
+  Archive styling
+*/
+
+#archive {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Archive nav */
+#archive #archive-views {
+  padding: 2rem 2rem 2rem 5rem;
+  display: flex;
+  align-items: center;
+  gap: 20%;
+  background: #FFF;
+}
+
+#archive #archive-views h1 {
+  color: #0D3273;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#archive #archive-views h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#archive #archive-views .selected {
+  text-decoration: underline;
+}
+
+/* Archive search bar */
+#archive #search-bar {
+  margin-left: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#archive #search-bar input {
+  padding: 0.75rem;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: #FFF;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Archive ticket boxes */
+#archive #ticket-boxes {
+  margin: 0 5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 2rem;
+}
+
+#archive #ticket-boxes .ticket-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.5rem;
+  border-radius: 50px;
+  background: #FFF;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#archive #ticket-boxes .ticket-box h3 {
+  color: #0D3273;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#archive #ticket-boxes .ticket-box p {
+  color: #000;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#archive #ticket-boxes .ticket-box .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#archive #ticket-boxes .ticket-box .feedback {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  overflow-wrap: break-word;
+}
+
+#archive #nav {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  gap: 1rem;
+}
+
+#archive #nav p {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#archive #nav img{
+  width: 25px;
+  height: 25px;
+}
