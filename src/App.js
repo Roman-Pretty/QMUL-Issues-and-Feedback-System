@@ -32,7 +32,7 @@ const App = () => {
             </svg>
             <ul>
                 <div></div>
-                <div></div>
+                <li className='text-header'><Link to="/archive">Archive</Link></li>
                 <li className='text-header'><Link to="/faq">FAQ</Link></li>
                 <div className='v-div'></div>
                 <li className='text-header'><a href='#' className='user-icon'>Account<User /></a></li>
