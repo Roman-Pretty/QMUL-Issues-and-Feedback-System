@@ -212,11 +212,11 @@ footer .footer-content .v-div {
 }
 #dashboard .dashboard-card .dashboard-card-accent {
   width: 24vw;
-  height: 60vh;
+  height: 62vh;
   background: #c9269b;
   position: absolute;
-  left: 10vw;
-  top: 22.1vh;
+  margin-left: 4rem;
+  margin-top: 2rem;
   z-index: -1;
   box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
 }
@@ -224,7 +224,7 @@ footer .footer-content .v-div {
   width: 10vw;
   height: 24vh;
   border: 1px solid #E5E5E5;
-  background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
+  background: #FFFFFF;
   box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
   flex-shrink: 0;
   display: flex;
@@ -259,11 +259,8 @@ footer .footer-content .v-div {
   width: 17vw;
   height: 40vh;
   border: 1px solid #E5E5E5;
-  background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
+  background: #FFFFFF;
   box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
-  border: 1px solid #E5E5E5;
-  background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
-  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -283,13 +280,12 @@ footer .footer-content .v-div {
 #dashboard .large-cards .large-card:active {
   transform: scale(1) translateZ(0);
   box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
-}/*# sourceMappingURL=style.css.map */
+}
 
 /* -------------------------------------- */
 /* 
   FAQ styling 
 */
-
 #FAQ {
   width: 100%;
   margin: 2rem 0 2rem 0;
@@ -372,7 +368,6 @@ footer .footer-content .v-div {
 /*
   Archive styling
 */
-
 #archive {
   display: flex;
   flex-direction: column;
@@ -504,7 +499,7 @@ footer .footer-content .v-div {
   line-height: normal;
 }
 
-#archive #nav img{
+#archive #nav img {
   width: 25px;
   height: 25px;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -11,9 +11,12 @@ To get started with the project, follow these steps:
     git clone https://github.com/your-username/QMUL-Issues-and-Feedback-System.git
     ```
 
-3. Install dependencies: Navigate to the project directory and install the required dependencies by running the following command:
+3. Install dependencies: Navigate to the project directory and install the required dependencies by running the following commands:
     ```
     npm install
+    ```
+    ```
+    npm i react-router-dom --force
     ```
 
 4. Start the development server: Once the dependencies are installed, start the development server by running the following command:
