@@ -1,12 +1,13 @@
 import '../css/App.css';
 import React, { useState } from 'react';
+import checkMark from '../img/check-mark.png';
 
 const SubmitEC = () => {
   // state variables
   const [selectedOption, setSelectedOption] = useState('');
-  const [showDropdown, setShowDropdown] = useState(false);
   const [affectedModules, setAffectedModules] = useState([]); 
   const [affectedAssessments, setAffectedAssessments] = useState([]);
+
 
   // affected assessments options
   const affectedAssessmentsOptions = {
@@ -38,44 +39,56 @@ const SubmitEC = () => {
     setAffectedAssessments(updatedAssessments);
   };
 
-  // handle radio button change
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value); // update selected option
+  // handle checkbox change
+  const handleCheckboxChange = (event) => {
+    const { value } = event.target;
+    setSelectedOption(value === selectedOption ? '' : value);
   };
+
+
+    const handleSubmit = (event) => {
+      // don't allow an empty form to be submitted
+      event.preventDefault(); 
+      alert("Enter a valid entry for each field.")
+  }
+
+
+
+
 
   // render the component for submitting an EC
   return (
     <div id="submit-ec-card">
-      <form>
+      <form onSubmit={handleSubmit}>
       <div id="ec-options">
         {/* choose standard ec */}
-        <div id="standard-ec" >
-          <input
+          <div id="standard-ec" >
+            <input
               id="standardec"
               type="checkbox"
               value="StandardEC"
               checked={selectedOption === 'StandardEC'}
-              onChange={handleOptionChange}
-            />
-            <label class="label-text" for="standardec"> Standard EC </label>
+              onChange={handleCheckboxChange }
+              />
+            <label className="label-text"> Standard EC </label>
           </div>
           <br />
           {/* choose urgent ec */}
           <div id="urgent-ec">
-            <input
+              <input
               id="urgentec"
               type="checkbox"
               value="UrgentEC"
               checked={selectedOption === 'UrgentEC'}
-              onChange={handleOptionChange}
-            />
-            <label class="label-text" for="urgentec"> Urgent EC </label>
+              onChange={handleCheckboxChange }
+              />
+              <label className="label-text"> Urgent EC </label>
           </div>
         </div>
         <br />
         {/* select reason for ec */}
         <div id="reason-for-ec">
-          <label className="label-text" for="ec-reason"> Reason for EC </label>
+          <label className="label-text"> Reason for EC </label>
           <br />
           <div className="ec-form-dropdown">
             <select id="ec-reason" name="ec-reason">
@@ -89,7 +102,7 @@ const SubmitEC = () => {
         <br />
         {/* summary input box for user to explain chosen reason further */}
         <div id="summary">
-          <label for="summary" class="label-text" >Summary: </label>
+          <label className="label-text" >Summary: </label>
           <div id="summary-text-box">
             <input 
             type="text"
@@ -174,21 +187,28 @@ const SubmitEC = () => {
       </div>
         <br/>
         {/* upload file */}
-        <div id="attach-file">
-          <label for="file-attachment" class="label-text">Supporting Evidence: </label>
+      <div id="attach-file">
+        <label className="label-text"> Supporting Evidence: </label>
+        <br />
+        <div id="input-file">
+          <label htmlFor="file-attachment" className="file-upload">Attach evidence </label>
           <br />
-          <div id="file-attachment-box">
-            <input 
-              type="file" 
-              id="file-attachment" 
-              name="filename" 
-            />   
-          </div>
+          <input 
+            type="file" 
+            id="file-attachment" 
+            name="filename" 
+            onChange={(e) => {
+              // get the selected file
+              const selectedFile = e.target.files[0];
+            }}
+          />   
         </div>
+</div>
+
         <br /> 
         {/* submit buttom to submit ec form */}
         <div id="submit-form">
-          <input type="submit" class="submit-button" />
+          <input type="submit" className="submit-button" />
         </div>
       </form>
     </div>

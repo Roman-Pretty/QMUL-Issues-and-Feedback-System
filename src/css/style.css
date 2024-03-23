@@ -669,6 +669,10 @@ input[type="password"] {
   padding-top: 0.24rem;
 }
 
+#ec-reason {
+  height: 2rem;
+}
+
 #summary {
  display: 'flex';
  flex-direction: 'column';
@@ -731,15 +735,38 @@ input[type="checkbox"], input[type="text"], select{
   font-family: Inter;
 }
 
+.assessments-inner-container {
+  background: #F5F5F5;
+}
+
+
+
 input[type="file"] {
-  font-family: Inter;
+  display: none;
+}
+
+
+.file-upload {
+  border-radius: 0.75rem;
   border: 1px solid #E5E5E5;
   background: #F5F5F5;
-  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.20) inset; 
-  border-radius: 0.2rem;
-  width: 15rem;
-
+  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.20) inset;
+  cursor: pointer;
+  color: var(--Secondary-Text, #939393);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 1.2rem;
+  padding: 0.7rem;
 }
+
+
+#input-file {
+  padding-top: 1.2rem;
+}
+
 
 #affected-modules, #affected-assessments {
   padding-top: 1rem;
@@ -765,3 +792,4 @@ input[type="file"] {
   overflow-y: auto; 
   border: 1px solid #ccc; 
 }
+
