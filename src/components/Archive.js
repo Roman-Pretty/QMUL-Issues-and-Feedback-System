@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import SearchBar from './SearchBar';
+import TicketBox from './TicketBox';
+import PageBar from './PageBar';
 
 function Archive() {
     const [ticketView, setTicketView] = useState(0)
@@ -20,7 +23,7 @@ function Archive() {
     return (
         <div id = "archive">
             <div id = "archive-views">
-                <h1> Archive </h1>
+                <h1> Archive </h1>  
                 <div onClick = {() => setTicketView(0)}>
                     <h2 class = {ticketView === 0 ? "selected" : ""}> All tickets </h2>
                 </div>
@@ -31,52 +34,15 @@ function Archive() {
                     <h2 class = {ticketView === 2 ? "selected" : ""}> View ECs </h2>
                 </div>
             </div>
-            <form id = "search-bar">
-                <input placeholder = "Search" value = {searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
-                <button type = "Submit"></button>
-            </form>
-            <div id = "ticket-boxes">
-                {tickets.map(ticket => {
-                    return <TicketBox ticketInfo = {ticket}></TicketBox>
-                })}
+            <div id = "archive-main-content">
+                <SearchBar searchTerm = {searchTerm} onSearchChange = {(e) => {setSearchTerm(e.target.value);}}></SearchBar>
+                <div id = "archive-ticket-boxes">
+                    {tickets.map(ticket => {
+                        return <TicketBox ticketInfo = {ticket} isArchived = {true}></TicketBox>
+                    })}
+                </div>
             </div>
-            <div id = "nav">
-                <img src = "chevrons-left.png" alt = ""></img>
-                <img src = "chevron-left.png" alt = ""></img>
-                <p> {pageNumber} </p>
-                <img src = "chevron-right.png" alt = ""></img>
-                <img src = "chevrons-right.png" alt = ""></img>
-            </div>
-        </div>
-    );
-}
-
-function TicketBox({ticketInfo}) {
-    const imgSrc = ticketInfo.status === "Approved" ? "tick.png" : "cross.png";
-
-    return (
-        <div class = "ticket-box">
-            <div class = "ticket-name">
-                <h2> {ticketInfo.name} </h2>
-            </div>
-            <img src = {imgSrc} alt = ""></img>
-            <div class = "info">
-                <h3> Status: </h3>
-                <p> {ticketInfo.status} </p>
-            </div>
-            <div class = "info">
-                <h3> Type: </h3>
-                <p> {ticketInfo.type} </p>
-            </div>
-            <div class = "info">
-                <h3> Reviewed by: </h3>
-                <p> {ticketInfo.reviewedBy} </p>
-            </div>
-            <div class = "feedback">
-                <h3> Feedback: </h3>
-                <p> {ticketInfo.feedback} </p>
-            </div>
-            <img src = "circle-chevron-right.png" alt = ""></img>
+            <PageBar pageNumber = {pageNumber}></PageBar>
         </div>
     );
 }

@@ -288,13 +288,13 @@ footer .footer-content .v-div {
 */
 #FAQ {
   width: 100%;
+  height: 100%;
   margin: 2rem 0 2rem 0;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
-
 #FAQ h1 {
   color: #092657;
   text-align: center;
@@ -304,14 +304,12 @@ footer .footer-content .v-div {
   font-weight: 700;
   line-height: normal;
 }
-
 #FAQ .question-box {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 #FAQ .question-box p {
   color: #000;
   font-family: Inter;
@@ -320,7 +318,6 @@ footer .footer-content .v-div {
   font-weight: 500;
   line-height: normal;
 }
-
 #FAQ .question-box .question {
   display: flex;
   width: 75vw;
@@ -330,12 +327,10 @@ footer .footer-content .v-div {
   justify-content: space-between;
   background: #FFF;
 }
-
 #FAQ .question-box .closed {
   border-radius: 50px;
   border: 1px solid #000;
 }
-
 #FAQ .question-box .opened {
   border-radius: 50px 50px 0px 0px;
   border-top: 1px solid #000;
@@ -343,7 +338,6 @@ footer .footer-content .v-div {
   border-left: 1px solid #000;
   background: #FFF;
 }
-
 #FAQ .question-box .answer {
   display: flex;
   width: 75vw;
@@ -354,7 +348,6 @@ footer .footer-content .v-div {
   border: 1px solid #000;
   background: #0D3273;
 }
-
 #FAQ .question-box .answer p {
   color: #FEFEFE;
   font-family: Inter;
@@ -369,12 +362,14 @@ footer .footer-content .v-div {
   Archive styling
 */
 #archive {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  /* Archive nav */
+  /* Archive ticket boxes */
 }
-
-/* Archive nav */
 #archive #archive-views {
   padding: 2rem 2rem 2rem 5rem;
   display: flex;
@@ -382,7 +377,6 @@ footer .footer-content .v-div {
   gap: 20%;
   background: #FFF;
 }
-
 #archive #archive-views h1 {
   color: #0D3273;
   font-family: Inter;
@@ -391,7 +385,6 @@ footer .footer-content .v-div {
   font-weight: 700;
   line-height: normal;
 }
-
 #archive #archive-views h2 {
   color: #000;
   font-family: Inter;
@@ -400,34 +393,16 @@ footer .footer-content .v-div {
   font-weight: 500;
   line-height: normal;
 }
-
 #archive #archive-views .selected {
   text-decoration: underline;
 }
-
-/* Archive search bar */
-#archive #search-bar {
-  margin-left: 4rem;
-  padding: 1rem;
+#archive #archive-main-content {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-self: center;
+  gap: 2rem;
 }
-
-#archive #search-bar input {
-  padding: 0.75rem;
-  border: 1px solid black;
-  border-radius: 25px;
-  background: #FFF;
-  font-family: Inter;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-/* Archive ticket boxes */
-#archive #ticket-boxes {
+#archive #archive-ticket-boxes {
   margin: 0 5rem 0 5rem;
   display: flex;
   flex-direction: column;
@@ -436,18 +411,115 @@ footer .footer-content .v-div {
   gap: 2rem;
 }
 
-#archive #ticket-boxes .ticket-box {
-  padding: 2rem;
+/* -------------------------------------- */
+/*
+  Issues styling
+*/
+#issues {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#issues #issues-side-bar {
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  background-color: #FFF;
+}
+#issues #issues-side-bar h1 {
+  color: #0D3273;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#issues #issues-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#issues #issues-main #issues-main-content {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: center;
+  gap: 2rem;
+  /* Issues ticket boxes */
+}
+#issues #issues-main #issues-main-content #issues-ticket-boxes {
+  margin: 0 5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 2rem;
+}
+
+/* -------------------------------------- */
+/*
+  SearchBar styling
+*/
+.search-bar {
+  margin-left: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-bar input {
+  color: #000;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0.75rem;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: #FFF;
+}
+
+/* -------------------------------------- */
+/*
+  TicketBox styling
+*/
+.ticket-outer-box {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3.5rem;
   border-radius: 50px;
   background: #FFF;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
-
-#archive #ticket-boxes .ticket-box h3 {
+.ticket-outer-box .ticket-name {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50px 0 0 50px;
+  background-color: rgb(20, 95, 183);
+}
+.ticket-outer-box .ticket-name h2 {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.ticket-outer-box .ticket-inner-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: center;
+}
+.ticket-outer-box .ticket-inner-box h3 {
   color: #0D3273;
   font-family: Inter;
   font-size: 21px;
@@ -455,8 +527,7 @@ footer .footer-content .v-div {
   font-weight: 300;
   line-height: normal;
 }
-
-#archive #ticket-boxes .ticket-box p {
+.ticket-outer-box .ticket-inner-box p {
   color: #000;
   font-family: Inter;
   font-size: 21px;
@@ -464,15 +535,13 @@ footer .footer-content .v-div {
   font-weight: 500;
   line-height: normal;
 }
-
-#archive #ticket-boxes .ticket-box .info {
+.ticket-outer-box .ticket-inner-box .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
-
-#archive #ticket-boxes .ticket-box .feedback {
+.ticket-outer-box .ticket-inner-box .feedback {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -480,16 +549,22 @@ footer .footer-content .v-div {
   overflow-wrap: break-word;
 }
 
-#archive #nav {
+/* -------------------------------------- */
+/*
+  PageBar styling
+*/
+.pagebar-nav {
+  height: 100%;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   align-self: center;
+  align-content: flex-end;
   gap: 1rem;
 }
-
-#archive #nav p {
+.pagebar-nav p {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -498,18 +573,15 @@ footer .footer-content .v-div {
   font-weight: 500;
   line-height: normal;
 }
-
-#archive #nav img {
+.pagebar-nav img {
   width: 25px;
   height: 25px;
-}/*# sourceMappingURL=style.css.map */
-
+}
 
 /* -------------------------------------- */
 /* 
   Login styling 
 */
-
 #login-card {
   width: 49rem;
   height: 28em;
@@ -517,7 +589,7 @@ footer .footer-content .v-div {
   border-radius: 2.375rem;
   border: 1px solid #E5E5E5;
   background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
-  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.20);
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
 }
 
 .login-form {
@@ -568,10 +640,10 @@ footer .footer-content .v-div {
   border-radius: 0.75rem;
   border: 1px solid #E5E5E5;
   background: #F5F5F5;
-  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.20) inset;
+  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.2) inset;
 }
 
-input[type="text"] {
+input[type=text] {
   margin-left: 22rem;
   width: 30rem;
   padding-left: 0.8rem;
@@ -579,12 +651,11 @@ input[type="text"] {
   font-size: 1rem;
 }
 
-input[type="password"] {
+input[type=password] {
   margin-left: 22rem;
   width: 30rem;
   padding-left: 0.8rem;
 }
-
 
 #forgotten-details {
   color: var(--Secondary-Text, #939393);
@@ -631,7 +702,6 @@ input[type="password"] {
 /* 
   Submit EC styling 
 */
-
 #submit-ec-card {
   width: 49rem;
   height: 48em;
@@ -639,7 +709,7 @@ input[type="password"] {
   border-radius: 2.375rem;
   border: 1px solid #E5E5E5;
   background: radial-gradient(104.85% 136.88% at 6.53% 100%, #FEFEFE 0%, #FBFBFB 100%);
-  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.20);  
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -674,8 +744,8 @@ input[type="password"] {
 }
 
 #summary {
- display: 'flex';
- flex-direction: 'column';
+  display: "flex";
+  flex-direction: "column";
 }
 
 #summary-text-box {
@@ -688,12 +758,11 @@ input[type="password"] {
   height: 7rem;
 }
 
-
-#affected-assessments, #ec-reason{
+#affected-assessments, #ec-reason {
   width: 46rem;
 }
 
-.affected-checkbox{
+.affected-checkbox {
   padding-left: 1.2rem;
   padding-top: 0.24rem;
 }
@@ -702,7 +771,6 @@ input[type="password"] {
   padding-top: 0.24rem;
   padding-left: 1.2rem;
 }
-
 
 #submit-form {
   text-align: center;
@@ -727,11 +795,11 @@ input[type="password"] {
   line-height: normal;
 }
 
-input[type="checkbox"], input[type="text"], select{
+input[type=checkbox], input[type=text], select {
   border-radius: 0.75rem;
   border: 1px solid #E5E5E5;
   background: #F5F5F5;
-  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.20) inset; 
+  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.2) inset;
   font-family: Inter;
 }
 
@@ -739,18 +807,15 @@ input[type="checkbox"], input[type="text"], select{
   background: #F5F5F5;
 }
 
-
-
-input[type="file"] {
+input[type=file] {
   display: none;
 }
-
 
 .file-upload {
   border-radius: 0.75rem;
   border: 1px solid #E5E5E5;
   background: #F5F5F5;
-  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.20) inset;
+  box-shadow: 0px 1px 24px 0px rgba(149, 157, 165, 0.2) inset;
   cursor: pointer;
   color: var(--Secondary-Text, #939393);
   font-family: Inter;
@@ -762,11 +827,9 @@ input[type="file"] {
   padding: 0.7rem;
 }
 
-
 #input-file {
   padding-top: 1.2rem;
 }
-
 
 #affected-modules, #affected-assessments {
   padding-top: 1rem;
@@ -775,21 +838,19 @@ input[type="file"] {
 
 #affected-assessments {
   max-height: 200px;
-  overflow-y: 'auto'
-  
+  overflow-y: "auto";
 }
 
 .assessments-outer-container {
-  width: 100%; 
-  height: 8rem; 
-  overflow: hidden; 
+  width: 100%;
+  height: 8rem;
+  overflow: hidden;
   padding-left: 1.2rem;
 }
 
 .assessments-inner-container {
   width: 100%;
-  height: 100%; 
-  overflow-y: auto; 
-  border: 1px solid #ccc; 
-}
-
+  height: 100%;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}/*# sourceMappingURL=style.css.map */

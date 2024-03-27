@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import rightArrow from '../img/chevron-right.png';
+import bottomArrow from '../img/chevron-bottom.png';
 
 function FAQ() {
     const questionsAnswers = [
@@ -22,7 +24,7 @@ function QuestionBox({question, answer}) {
     const [displayAnswer, setDisplayAnswer] = useState(false);
     
     const openedClosed = !displayAnswer ? "closed" : "opened";
-    const imgSrc = !displayAnswer ? "chevron-right.png" : "chevron-bottom.png";
+    const imgSrc = !displayAnswer ? rightArrow: bottomArrow;
 
     return (
         <div class = "question-box">
