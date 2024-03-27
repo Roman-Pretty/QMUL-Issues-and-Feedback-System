@@ -52,10 +52,6 @@ const SubmitEC = () => {
       alert("Enter a valid entry for each field.")
   }
 
-
-
-
-
   // render the component for submitting an EC
   return (
     <div id="submit-ec-card">

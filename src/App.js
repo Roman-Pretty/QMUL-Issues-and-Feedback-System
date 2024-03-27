@@ -13,6 +13,7 @@ import FAQ from './components/FAQ';
 import Archive from './components/Archive';
 import Login from './components/Login';
 import SubmitEC from './components/SubmitEC';
+import SubmitIssue from './components/SubmitIssue';
 import Issues from './components/Issues';
 import React, { useState } from 'react';
 import { ReactComponent as User } from './img/user.svg';
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/archive" element={<Archive />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/submit-ec" element={<SubmitEC />}></Route>
+        <Route path="/submit-issue" element={<SubmitIssue />}></Route>
         <Route path="/issues" element={<Issues />}></Route>
       </Routes>
       <Footer />
